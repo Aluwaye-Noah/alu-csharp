@@ -1,9 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+using System;
 
-	  <PropertyGroup>
-		      <OutputType>Exe</OutputType>
-		          <TargetFramework>netcoreapp2.1</TargetFramework>
-			      <RootNamespace>_1_element_at</RootNamespace>
-			        </PropertyGroup>
-
-			</Project>
+class Array
+{
+    public static int elementAt(int[] array, int index)
+    {
+        if (index < 0 || index >= array.Length)
+        {
+            Console.WriteLine("Index out of range");
+            return -1;
+        }
+        return array[index];
+    }
+}
